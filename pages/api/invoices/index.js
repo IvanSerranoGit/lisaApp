@@ -1,4 +1,4 @@
-  function handler(req, res) {
+  async function handler(req, res) {
     var axios = require('axios');
     var qs = require('qs');
     const {
@@ -22,7 +22,7 @@
         },
         data: data
     };
-     axios(config)
+    await axios(config)
     .then(function (response) {
         console.log(JSON.stringify(response.data));
          return res.end(JSON.stringify(response.data))
