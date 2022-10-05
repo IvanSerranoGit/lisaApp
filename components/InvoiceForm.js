@@ -17,16 +17,14 @@ function InvoiceForm() {
     // }, [])
     const router = useRouter();
     const handleChange = ({target: {name, value}}) =>
-        // console.log(name, value);
-        setInvoice({...invoice, [name]: value})
- 
-        const [invoiceList, setInvoiceList] = useState([])
-        const  handleSubmit = async(e) =>{
+    setInvoice({...invoice, [name]: value})    
+    const [invoiceList, setInvoiceList] = useState([])
+    const  handleSubmit = async(e) =>{
         e.preventDefault();
         const res = await axios.post('api/invoices', invoice);
         // const respuesta =  res.data.registros.reg[0];
         setInvoiceList(res.data.registros.reg);
-        router.push('/'); 
+        // router.push('/'); 
     };
 
 
