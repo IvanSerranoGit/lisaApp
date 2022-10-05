@@ -1,16 +1,12 @@
   function handler(req, res) {
-    console.log(req.data);
-    console.log(req);
-    console.log(res);
     var axios = require('axios');
+    var qs = require('qs');
     const {
         serie,
         numero_factura,
         rfc,
         codigo_cliente,
     } = req.body
-    console.log(req.body);
-    var qs = require('qs');
     var data = qs.stringify({
         SERIE_FACTURA: serie,
         NUMERO_FACTURA: numero_factura,
@@ -26,10 +22,6 @@
         },
         data: data
     };
-    // const newData = await result.getAll()
-    // res.status(200).json({newData, length: newData.length}
-    // console.log(res);
-    //  res.end(JSON.stringify(response))
      axios(config)
     .then(function (response) {
         console.log(JSON.stringify(response.data));

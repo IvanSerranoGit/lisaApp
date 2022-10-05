@@ -1,9 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import { NextRequest } from "next/server";
-import { NextApiRequest, NextApiResponse } from "next";
 import React, { useEffect, useState } from 'react'
-import { NextResponse } from 'next/server'
 
 function InvoiceForm() {
     const [invoice, setInvoice] = useState({
@@ -29,7 +26,7 @@ function InvoiceForm() {
         const res = await axios.post('api/invoices', invoice);
         // const respuesta =  res.data.registros.reg[0];
         setInvoiceList(res.data.registros.reg);
-        // router.push('/'); 
+        router.push('/'); 
     };
 
 
