@@ -15,12 +15,12 @@
     });
     var config = {
         method: 'post',
+        timeout : 1000,
         url: 'https://lisa.rpalumza.com/galileo/lisa/geninf/consulta_factura',
         headers: {
             'Authorization': 'Basic Q09OU1VMVEFTOmFsdW16YTIy',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        timeout : 1000,
         data: data
     };
     await axios(config)

@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react'
 
 function InvoiceForm() {
     const [invoice, setInvoice] = useState({
-        serie: "V33",
-        rfc: "RIMM760224BW8",
-        codigo_cliente: 233648,
-        numero_factura: 1375664,
+        serie: "",
+        rfc: "",
+        codigo_cliente: 0,
+        numero_factura: 0,
     });
     // useEffect(() => {
     //     window
