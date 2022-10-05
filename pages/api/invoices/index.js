@@ -20,14 +20,17 @@
             'Authorization': 'Basic Q09OU1VMVEFTOmFsdW16YTIy',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        timeout: 1000, 
+        timeout : 1000,
         data: data
     };
     await axios(config)
     .then(function (response) {
         console.log(JSON.stringify(response.data));
-         return res.end(JSON.stringify(response.data))
-    }) 
+        return res.end(JSON.stringify(response.data))
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     }
 
     export default handler
