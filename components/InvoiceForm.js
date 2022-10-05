@@ -15,7 +15,7 @@ function InvoiceForm() {
     //     .then((res))
     //     setInvoice()
     // }, [])
-    const router = useRouter();
+    // const router = useRouter();
     const handleChange = ({target: {name, value}}) =>
     setInvoice({...invoice, [name]: value})    
     const [invoiceList, setInvoiceList] = useState([])
